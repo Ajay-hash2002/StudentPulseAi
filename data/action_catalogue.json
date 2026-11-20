@@ -1,0 +1,213 @@
+{
+  "actions": [
+    {
+      "action_id": "act_fastapi_crud",
+      "skill_name": "FastAPI",
+      "target_level": 3,
+      "title": "Build a CRUD REST API with FastAPI and Pydantic",
+      "description": "Construct a fully functional backend API with route validation, Pydantic schemas, dependency injection, and SQLite integration.",
+      "estimated_effort": "8 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Project Practice"
+    },
+    {
+      "action_id": "act_sql_joins_indexing",
+      "skill_name": "SQL",
+      "target_level": 3,
+      "title": "Master Complex SQL Joins and Query Optimization",
+      "description": "Practice writing multi-table inner/outer joins, aggregate queries with GROUP BY/HAVING, and analyze EXPLAIN query plans.",
+      "estimated_effort": "6 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Coursework"
+    },
+    {
+      "action_id": "act_dsa_trees_graphs",
+      "skill_name": "Data Structures",
+      "target_level": 3,
+      "title": "Implement Non-Linear Data Structures (Trees, Graphs, Heaps)",
+      "description": "Code custom implementations in Python for Binary Search Trees, BFS/DFS graph traversals, and min/max heaps with unit tests.",
+      "estimated_effort": "12 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Coding Practice"
+    },
+    {
+      "action_id": "act_python_advanced_features",
+      "skill_name": "Python",
+      "target_level": 3,
+      "title": "Deep Dive into Python Generators, Decorators, and AsyncIO",
+      "description": "Write idiomatic Python scripts using context managers, functools.wraps decorators, and asynchronous concurrency.",
+      "estimated_effort": "10 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Coursework"
+    },
+    {
+      "action_id": "act_pytest_suite",
+      "skill_name": "Testing",
+      "target_level": 2,
+      "title": "Write Automated Unit and Integration Tests with pytest",
+      "description": "Create test suites testing API responses, status codes, fixtures, and parameterized edge cases for critical business functions.",
+      "estimated_effort": "5 hours",
+      "difficulty": "Beginner",
+      "priority": "medium",
+      "category": "Project Practice"
+    },
+    {
+      "action_id": "act_docker_container",
+      "skill_name": "Docker",
+      "target_level": 2,
+      "title": "Containerize a Python Web Application using Docker",
+      "description": "Write a multi-stage Dockerfile, build an image, configure port mappings, and test container execution locally.",
+      "estimated_effort": "4 hours",
+      "difficulty": "Beginner",
+      "priority": "medium",
+      "category": "DevOps"
+    },
+    {
+      "action_id": "act_git_branching",
+      "skill_name": "Git",
+      "target_level": 2,
+      "title": "Practice Git Feature Branch Workflow and PR Reviews",
+      "description": "Create feature branches, perform interactive rebases, resolve merge conflicts, and author structured pull request descriptions.",
+      "estimated_effort": "3 hours",
+      "difficulty": "Beginner",
+      "priority": "medium",
+      "category": "Tools"
+    },
+    {
+      "action_id": "act_pandas_data_wrangling",
+      "skill_name": "Pandas",
+      "target_level": 3,
+      "title": "Clean and Aggregate Complex Datasets with Pandas",
+      "description": "Handle missing values, perform groupby transformations, pivot tables, and datetime indexing on real-world datasets.",
+      "estimated_effort": "8 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Data Analysis"
+    },
+    {
+      "action_id": "act_statistics_hypothesis",
+      "skill_name": "Statistics",
+      "target_level": 3,
+      "title": "Statistical Testing and Probability Distributions in Python",
+      "description": "Calculate central tendency, variance, confidence intervals, and execute hypothesis tests (t-tests, chi-squared) with SciPy.",
+      "estimated_effort": "8 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Coursework"
+    },
+    {
+      "action_id": "act_data_viz_dashboard",
+      "skill_name": "Data Visualization",
+      "target_level": 3,
+      "title": "Build Interactive Visual Dashboards",
+      "description": "Create informative charts with clear labels, legends, and accessibility guidelines using Chart.js or Matplotlib/Seaborn.",
+      "estimated_effort": "6 hours",
+      "difficulty": "Intermediate",
+      "priority": "medium",
+      "category": "Data Analysis"
+    },
+    {
+      "action_id": "act_ml_classification",
+      "skill_name": "Machine Learning",
+      "target_level": 3,
+      "title": "Train and Evaluate Supervised Classification Models",
+      "description": "Preprocess features, train Random Forest and Logistic Regression models, and measure precision, recall, and ROC-AUC.",
+      "estimated_effort": "14 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Machine Learning"
+    },
+    {
+      "action_id": "act_react_state_components",
+      "skill_name": "React",
+      "target_level": 2,
+      "title": "Build Modular UI Components with React Hooks",
+      "description": "Use useState and useEffect to manage component lifecycles, handle asynchronous API requests, and render responsive views.",
+      "estimated_effort": "10 hours",
+      "difficulty": "Intermediate",
+      "priority": "medium",
+      "category": "Frontend"
+    },
+    {
+      "action_id": "act_js_dom_fetch",
+      "skill_name": "JavaScript",
+      "target_level": 3,
+      "title": "Asynchronous JavaScript, DOM Manipulation, and Fetch API",
+      "description": "Implement ES6+ async/await data fetching, debounce/throttle handlers, and dynamic DOM rendering without frameworks.",
+      "estimated_effort": "8 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Frontend"
+    },
+    {
+      "action_id": "act_html_css_responsive",
+      "skill_name": "HTML/CSS",
+      "target_level": 3,
+      "title": "Responsive Layouts with CSS Grid, Flexbox, and Media Queries",
+      "description": "Design accessible, fluid interfaces complying with WCAG contrast standards and mobile-first responsive breakpoints.",
+      "estimated_effort": "6 hours",
+      "difficulty": "Intermediate",
+      "priority": "medium",
+      "category": "Frontend"
+    },
+    {
+      "action_id": "act_comm_presentation",
+      "skill_name": "Communication",
+      "target_level": 3,
+      "title": "Technical Presentation and Engineering Documentation Practice",
+      "description": "Deliver a 5-minute technical walkthrough of an architecture diagram and write clear markdown documentation with code examples.",
+      "estimated_effort": "4 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Soft Skills"
+    },
+    {
+      "action_id": "act_mock_interview",
+      "skill_name": "Presentation",
+      "target_level": 2,
+      "title": "Complete 2 Behavioral and Technical Mock Interviews",
+      "description": "Practice the STAR method (Situation, Task, Action, Result) for behavioral questions and explain technical tradeoffs aloud.",
+      "estimated_effort": "4 hours",
+      "difficulty": "Beginner",
+      "priority": "high",
+      "category": "Interview Preparation"
+    },
+    {
+      "action_id": "act_algo_dynamic_programming",
+      "skill_name": "Algorithms",
+      "target_level": 2,
+      "title": "Solve 15 Fundamental Dynamic Programming & Greedy Problems",
+      "description": "Practice memoization, tabulation, and greedy strategies on classical problems (knapsack, coin change, longest common subsequence).",
+      "estimated_effort": "10 hours",
+      "difficulty": "Intermediate",
+      "priority": "medium",
+      "category": "Coding Practice"
+    },
+    {
+      "action_id": "act_rest_api_design",
+      "skill_name": "REST APIs",
+      "target_level": 3,
+      "title": "Design RESTful Contracts with HTTP Verbs and Status Codes",
+      "description": "Follow REST principles: proper HTTP methods (GET/POST/PATCH/DELETE), status codes (200, 201, 400, 404, 422), and envelope patterns.",
+      "estimated_effort": "5 hours",
+      "difficulty": "Intermediate",
+      "priority": "high",
+      "category": "Backend"
+    },
+    {
+      "action_id": "act_problem_solving",
+      "skill_name": "Problem Solving",
+      "target_level": 3,
+      "title": "Systematic Debugging and Problem Decomposition Workshop",
+      "description": "Practice root cause analysis using logs, reproduction steps, and bisecting errors in complex codebases.",
+      "estimated_effort": "6 hours",
+      "difficulty": "Intermediate",
+      "priority": "medium",
+      "category": "Core Competencies"
+    }
+  ]
+}

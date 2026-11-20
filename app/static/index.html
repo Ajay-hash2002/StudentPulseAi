@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Pulse AI | Evidence → Insight → Action</title>
+  
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- Top Demo Banner -->
+  <div class="demo-banner" id="demo-banner">
+    <div>
+      <span class="badge-pill">DEMO DATA</span>
+      <span>Synthetic test profiles active • Built for MSE-2 Prototype Review</span>
+    </div>
+    <div>
+      <span style="opacity: 0.8; font-size: 0.75rem;">Team Byte Force • KIET</span>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-header">
+        <div class="brand-logo">SP</div>
+        <div class="brand-text">
+          <h1>Student Pulse AI</h1>
+          <p>Evidence → Insight → Action</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Capabilities</div>
+        <a href="#dashboard" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="#profile" class="nav-item">
+          <span class="nav-icon">👤</span>
+          <span>Unified Profile</span>
+        </a>
+        <a href="#assessments" class="nav-item">
+          <span class="nav-icon">📝</span>
+          <span>Assessment Analysis</span>
+        </a>
+
+        <div class="nav-section-title">Career Readiness</div>
+        <a href="#skill-gaps" class="nav-item">
+          <span class="nav-icon">🎯</span>
+          <span>Skill-Gap Matrix</span>
+        </a>
+        <a href="#project-readiness" class="nav-item">
+          <span class="nav-icon">💼</span>
+          <span>Project Readiness</span>
+        </a>
+        <a href="#interview-readiness" class="nav-item">
+          <span class="nav-icon">🗣️</span>
+          <span>Interview Readiness</span>
+        </a>
+        <a href="#action-plan" class="nav-item">
+          <span class="nav-icon">⚡</span>
+          <span>Personalised Plan</span>
+        </a>
+
+        <div class="nav-section-title">Governance & System</div>
+        <a href="#privacy" class="nav-item">
+          <span class="nav-icon">🛡️</span>
+          <span>Privacy & Settings</span>
+        </a>
+        <a href="/docs" target="_blank" class="nav-item">
+          <span class="nav-icon">📖</span>
+          <span>API Docs (Swagger)</span>
+        </a>
+      </nav>
+
+      <!-- User Info & Logout -->
+      <div class="sidebar-user">
+        <div class="user-profile-summary">
+          <div class="user-avatar" id="sidebar-user-avatar">SP</div>
+          <div class="user-info">
+            <div class="user-name" id="sidebar-user-name">Student Account</div>
+            <div class="user-role">Student Profile</div>
+          </div>
+          <button class="btn-logout" id="btn-logout" title="Sign Out">🚪</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+      <!-- Top Navbar -->
+      <header class="top-navbar" id="top-navbar">
+        <div class="navbar-title">
+          <button class="mobile-toggle" id="btn-mobile-toggle">☰</button>
+          <h2 class="page-title" id="page-title">Dashboard</h2>
+        </div>
+        <div class="top-actions">
+          <span class="badge badge-low" style="font-size: 0.72rem;">FastAPI + Python Intelligence</span>
+        </div>
+      </header>
+
+      <!-- Injected Route Container -->
+      <main class="content-area" id="content-area">
+        <!-- Route views render here dynamically -->
+      </main>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <div>Student Pulse AI • MSE-2 Prototype Baseline • KIET AI Fundamentals & Python Programming</div>
+        <div>Team Byte Force: Abhishek, Anubhav, Amit, Ajay</div>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module">
+    import { Router } from './js/router.js';
+    import { auth } from './js/auth.js';
+
+    const router = new Router();
+    router.init();
+
+    // Mobile sidebar toggle
+    const toggleBtn = document.getElementById('btn-mobile-toggle');
+    const sidebar = document.getElementById('sidebar');
+    if (toggleBtn && sidebar) {
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    }
+
+    // Logout
+    const logoutBtn = document.getElementById('btn-logout');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', () => {
+        auth.logout();
+      });
+    }
+  </script>
+</body>
+</html>

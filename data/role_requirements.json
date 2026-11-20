@@ -1,0 +1,80 @@
+{
+  "roles": [
+    {
+      "role_id": "backend_dev",
+      "title": "Backend Developer",
+      "description": "Designs, builds, and maintains server-side web applications, REST APIs, and databases.",
+      "required_skills": [
+        { "skill_name": "Python", "required_level": 3, "weight": 1.5 },
+        { "skill_name": "FastAPI", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "SQL", "required_level": 3, "weight": 1.3 },
+        { "skill_name": "REST APIs", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "Data Structures", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "Algorithms", "required_level": 2, "weight": 1.0 },
+        { "skill_name": "Git", "required_level": 2, "weight": 1.0 },
+        { "skill_name": "Testing", "required_level": 2, "weight": 0.8 },
+        { "skill_name": "Docker", "required_level": 2, "weight": 0.8 },
+        { "skill_name": "Communication", "required_level": 2, "weight": 0.8 }
+      ]
+    },
+    {
+      "role_id": "data_analyst",
+      "title": "Data Analyst",
+      "description": "Translates numbers into plain English to help organizations make better business decisions.",
+      "required_skills": [
+        { "skill_name": "SQL", "required_level": 3, "weight": 1.5 },
+        { "skill_name": "Python", "required_level": 3, "weight": 1.3 },
+        { "skill_name": "Pandas", "required_level": 3, "weight": 1.4 },
+        { "skill_name": "Statistics", "required_level": 3, "weight": 1.3 },
+        { "skill_name": "Data Visualization", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "Communication", "required_level": 3, "weight": 1.1 },
+        { "skill_name": "Presentation", "required_level": 2, "weight": 1.0 },
+        { "skill_name": "Problem Solving", "required_level": 3, "weight": 1.0 }
+      ]
+    },
+    {
+      "role_id": "ml_engineer",
+      "title": "ML Engineer",
+      "description": "Researches, builds, and designs self-running artificial intelligence systems to automate predictive models.",
+      "required_skills": [
+        { "skill_name": "Python", "required_level": 4, "weight": 1.5 },
+        { "skill_name": "Machine Learning", "required_level": 3, "weight": 1.5 },
+        { "skill_name": "Pandas", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "Statistics", "required_level": 3, "weight": 1.3 },
+        { "skill_name": "Data Structures", "required_level": 3, "weight": 1.1 },
+        { "skill_name": "Algorithms", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "REST APIs", "required_level": 2, "weight": 1.0 },
+        { "skill_name": "Docker", "required_level": 2, "weight": 0.8 },
+        { "skill_name": "Problem Solving", "required_level": 3, "weight": 1.0 }
+      ]
+    },
+    {
+      "role_id": "fullstack_dev",
+      "title": "Full-Stack Developer",
+      "description": "Develops both client and server software from responsive frontend interfaces to scalable backend services.",
+      "required_skills": [
+        { "skill_name": "JavaScript", "required_level": 3, "weight": 1.4 },
+        { "skill_name": "HTML/CSS", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "React", "required_level": 2, "weight": 1.2 },
+        { "skill_name": "Python", "required_level": 3, "weight": 1.3 },
+        { "skill_name": "REST APIs", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "SQL", "required_level": 2, "weight": 1.1 },
+        { "skill_name": "Git", "required_level": 2, "weight": 1.0 },
+        { "skill_name": "Communication", "required_level": 2, "weight": 0.8 }
+      ]
+    },
+    {
+      "role_id": "qa_engineer",
+      "title": "QA/Test Engineer",
+      "description": "Creates automated and manual test plans to ensure software meets high reliability and quality benchmarks.",
+      "required_skills": [
+        { "skill_name": "Testing", "required_level": 3, "weight": 1.5 },
+        { "skill_name": "Python", "required_level": 2, "weight": 1.2 },
+        { "skill_name": "REST APIs", "required_level": 3, "weight": 1.3 },
+        { "skill_name": "Git", "required_level": 2, "weight": 1.0 },
+        { "skill_name": "Problem Solving", "required_level": 3, "weight": 1.2 },
+        { "skill_name": "Communication", "required_level": 3, "weight": 1.1 }
+      ]
+    }
+  ]
+}

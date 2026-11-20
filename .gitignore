@@ -1,0 +1,23 @@
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs & temp
+*.log
+.DS_Store
+Thumbs.db
+dist/
+build/

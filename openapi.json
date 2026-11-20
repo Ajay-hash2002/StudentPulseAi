@@ -1,0 +1,1434 @@
+{
+    "openapi":  "3.1.0",
+    "info":  {
+                 "title":  "Student Pulse AI",
+                 "description":  "Evidence â?? Insight â?? Action | AI-Powered Student Success \u0026 Career-Readiness Platform",
+                 "version":  "1.0.0"
+             },
+    "paths":  {
+                  "/api/v1/health":  {
+                                         "get":  {
+                                                     "tags":  [
+                                                                  "Health"
+                                                              ],
+                                                     "summary":  "Health Check",
+                                                     "operationId":  "health_check_api_v1_health_get",
+                                                     "responses":  {
+                                                                       "200":  {
+                                                                                   "description":  "Successful Response",
+                                                                                   "content":  {
+                                                                                                   "application/json":  {
+                                                                                                                            "schema":  {
+
+                                                                                                                                       }
+                                                                                                                        }
+                                                                                               }
+                                                                               }
+                                                                   }
+                                                 }
+                                     },
+                  "/health":  {
+                                  "get":  {
+                                              "tags":  [
+                                                           "Health"
+                                                       ],
+                                              "summary":  "Health Check",
+                                              "operationId":  "health_check_health_get",
+                                              "responses":  {
+                                                                "200":  {
+                                                                            "description":  "Successful Response",
+                                                                            "content":  {
+                                                                                            "application/json":  {
+                                                                                                                     "schema":  {
+
+                                                                                                                                }
+                                                                                                                 }
+                                                                                        }
+                                                                        }
+                                                            }
+                                          }
+                              },
+                  "/api/v1/auth/register":  {
+                                                "post":  {
+                                                             "tags":  [
+                                                                          "Authentication"
+                                                                      ],
+                                                             "summary":  "Register Student",
+                                                             "operationId":  "register_student_api_v1_auth_register_post",
+                                                             "requestBody":  {
+                                                                                 "content":  {
+                                                                                                 "application/json":  {
+                                                                                                                          "schema":  {
+                                                                                                                                         "$ref":  "#/components/schemas/RegisterRequest"
+                                                                                                                                     }
+                                                                                                                      }
+                                                                                             },
+                                                                                 "required":  true
+                                                                             },
+                                                             "responses":  {
+                                                                               "200":  {
+                                                                                           "description":  "Successful Response",
+                                                                                           "content":  {
+                                                                                                           "application/json":  {
+                                                                                                                                    "schema":  {
+                                                                                                                                                   "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                               }
+                                                                                                                                }
+                                                                                                       }
+                                                                                       },
+                                                                               "422":  {
+                                                                                           "description":  "Validation Error",
+                                                                                           "content":  {
+                                                                                                           "application/json":  {
+                                                                                                                                    "schema":  {
+                                                                                                                                                   "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                               }
+                                                                                                                                }
+                                                                                                       }
+                                                                                       }
+                                                                           }
+                                                         }
+                                            },
+                  "/api/v1/auth/login":  {
+                                             "post":  {
+                                                          "tags":  [
+                                                                       "Authentication"
+                                                                   ],
+                                                          "summary":  "Login Student",
+                                                          "operationId":  "login_student_api_v1_auth_login_post",
+                                                          "requestBody":  {
+                                                                              "content":  {
+                                                                                              "application/json":  {
+                                                                                                                       "schema":  {
+                                                                                                                                      "$ref":  "#/components/schemas/LoginRequest"
+                                                                                                                                  }
+                                                                                                                   }
+                                                                                          },
+                                                                              "required":  true
+                                                                          },
+                                                          "responses":  {
+                                                                            "200":  {
+                                                                                        "description":  "Successful Response",
+                                                                                        "content":  {
+                                                                                                        "application/json":  {
+                                                                                                                                 "schema":  {
+                                                                                                                                                "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                            }
+                                                                                                                             }
+                                                                                                    }
+                                                                                    },
+                                                                            "422":  {
+                                                                                        "description":  "Validation Error",
+                                                                                        "content":  {
+                                                                                                        "application/json":  {
+                                                                                                                                 "schema":  {
+                                                                                                                                                "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                            }
+                                                                                                                             }
+                                                                                                    }
+                                                                                    }
+                                                                        }
+                                                      }
+                                         },
+                  "/api/v1/students/me":  {
+                                              "get":  {
+                                                          "tags":  [
+                                                                       "Students"
+                                                                   ],
+                                                          "summary":  "Get Own Profile",
+                                                          "operationId":  "get_own_profile_api_v1_students_me_get",
+                                                          "responses":  {
+                                                                            "200":  {
+                                                                                        "description":  "Successful Response",
+                                                                                        "content":  {
+                                                                                                        "application/json":  {
+                                                                                                                                 "schema":  {
+                                                                                                                                                "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                            }
+                                                                                                                             }
+                                                                                                    }
+                                                                                    }
+                                                                        },
+                                                          "security":  [
+                                                                           {
+                                                                               "HTTPBearer":  [
+
+                                                                                              ]
+                                                                           }
+                                                                       ]
+                                                      },
+                                              "delete":  {
+                                                             "tags":  [
+                                                                          "Students"
+                                                                      ],
+                                                             "summary":  "Delete Own Account",
+                                                             "operationId":  "delete_own_account_api_v1_students_me_delete",
+                                                             "responses":  {
+                                                                               "200":  {
+                                                                                           "description":  "Successful Response",
+                                                                                           "content":  {
+                                                                                                           "application/json":  {
+                                                                                                                                    "schema":  {
+                                                                                                                                                   "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                               }
+                                                                                                                                }
+                                                                                                       }
+                                                                                       }
+                                                                           },
+                                                             "security":  [
+                                                                              {
+                                                                                  "HTTPBearer":  [
+
+                                                                                                 ]
+                                                                              }
+                                                                          ]
+                                                         },
+                                              "patch":  {
+                                                            "tags":  [
+                                                                         "Students"
+                                                                     ],
+                                                            "summary":  "Update Own Profile",
+                                                            "operationId":  "update_own_profile_api_v1_students_me_patch",
+                                                            "requestBody":  {
+                                                                                "content":  {
+                                                                                                "application/json":  {
+                                                                                                                         "schema":  {
+                                                                                                                                        "$ref":  "#/components/schemas/StudentUpdate"
+                                                                                                                                    }
+                                                                                                                     }
+                                                                                            },
+                                                                                "required":  true
+                                                                            },
+                                                            "responses":  {
+                                                                              "200":  {
+                                                                                          "description":  "Successful Response",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      },
+                                                                              "422":  {
+                                                                                          "description":  "Validation Error",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      }
+                                                                          },
+                                                            "security":  [
+                                                                             {
+                                                                                 "HTTPBearer":  [
+
+                                                                                                ]
+                                                                             }
+                                                                         ]
+                                                        }
+                                          },
+                  "/api/v1/students/me/evidence":  {
+                                                       "get":  {
+                                                                   "tags":  [
+                                                                                "Students"
+                                                                            ],
+                                                                   "summary":  "Get Own Evidence",
+                                                                   "operationId":  "get_own_evidence_api_v1_students_me_evidence_get",
+                                                                   "responses":  {
+                                                                                     "200":  {
+                                                                                                 "description":  "Successful Response",
+                                                                                                 "content":  {
+                                                                                                                 "application/json":  {
+                                                                                                                                          "schema":  {
+                                                                                                                                                         "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                     }
+                                                                                                                                      }
+                                                                                                             }
+                                                                                             }
+                                                                                 },
+                                                                   "security":  [
+                                                                                    {
+                                                                                        "HTTPBearer":  [
+
+                                                                                                       ]
+                                                                                    }
+                                                                                ]
+                                                               }
+                                                   },
+                  "/api/v1/students/me/skills":  {
+                                                     "post":  {
+                                                                  "tags":  [
+                                                                               "Students"
+                                                                           ],
+                                                                  "summary":  "Add Skill Evidence",
+                                                                  "operationId":  "add_skill_evidence_api_v1_students_me_skills_post",
+                                                                  "requestBody":  {
+                                                                                      "content":  {
+                                                                                                      "application/json":  {
+                                                                                                                               "schema":  {
+                                                                                                                                              "$ref":  "#/components/schemas/EvidenceCreate"
+                                                                                                                                          }
+                                                                                                                           }
+                                                                                                  },
+                                                                                      "required":  true
+                                                                                  },
+                                                                  "responses":  {
+                                                                                    "200":  {
+                                                                                                "description":  "Successful Response",
+                                                                                                "content":  {
+                                                                                                                "application/json":  {
+                                                                                                                                         "schema":  {
+                                                                                                                                                        "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                    }
+                                                                                                                                     }
+                                                                                                            }
+                                                                                            },
+                                                                                    "422":  {
+                                                                                                "description":  "Validation Error",
+                                                                                                "content":  {
+                                                                                                                "application/json":  {
+                                                                                                                                         "schema":  {
+                                                                                                                                                        "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                    }
+                                                                                                                                     }
+                                                                                                            }
+                                                                                            }
+                                                                                },
+                                                                  "security":  [
+                                                                                   {
+                                                                                       "HTTPBearer":  [
+
+                                                                                                      ]
+                                                                                   }
+                                                                               ]
+                                                              }
+                                                 },
+                  "/api/v1/students/me/projects":  {
+                                                       "get":  {
+                                                                   "tags":  [
+                                                                                "Students"
+                                                                            ],
+                                                                   "summary":  "List Own Projects",
+                                                                   "operationId":  "list_own_projects_api_v1_students_me_projects_get",
+                                                                   "responses":  {
+                                                                                     "200":  {
+                                                                                                 "description":  "Successful Response",
+                                                                                                 "content":  {
+                                                                                                                 "application/json":  {
+                                                                                                                                          "schema":  {
+                                                                                                                                                         "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                     }
+                                                                                                                                      }
+                                                                                                             }
+                                                                                             }
+                                                                                 },
+                                                                   "security":  [
+                                                                                    {
+                                                                                        "HTTPBearer":  [
+
+                                                                                                       ]
+                                                                                    }
+                                                                                ]
+                                                               },
+                                                       "post":  {
+                                                                    "tags":  [
+                                                                                 "Students"
+                                                                             ],
+                                                                    "summary":  "Add Project",
+                                                                    "operationId":  "add_project_api_v1_students_me_projects_post",
+                                                                    "requestBody":  {
+                                                                                        "content":  {
+                                                                                                        "application/json":  {
+                                                                                                                                 "schema":  {
+                                                                                                                                                "$ref":  "#/components/schemas/ProjectCreate"
+                                                                                                                                            }
+                                                                                                                             }
+                                                                                                    },
+                                                                                        "required":  true
+                                                                                    },
+                                                                    "responses":  {
+                                                                                      "200":  {
+                                                                                                  "description":  "Successful Response",
+                                                                                                  "content":  {
+                                                                                                                  "application/json":  {
+                                                                                                                                           "schema":  {
+                                                                                                                                                          "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                      }
+                                                                                                                                       }
+                                                                                                              }
+                                                                                              },
+                                                                                      "422":  {
+                                                                                                  "description":  "Validation Error",
+                                                                                                  "content":  {
+                                                                                                                  "application/json":  {
+                                                                                                                                           "schema":  {
+                                                                                                                                                          "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                      }
+                                                                                                                                       }
+                                                                                                              }
+                                                                                              }
+                                                                                  },
+                                                                    "security":  [
+                                                                                     {
+                                                                                         "HTTPBearer":  [
+
+                                                                                                        ]
+                                                                                     }
+                                                                                 ]
+                                                                }
+                                                   },
+                  "/api/v1/students/me/certifications":  {
+                                                             "get":  {
+                                                                         "tags":  [
+                                                                                      "Students"
+                                                                                  ],
+                                                                         "summary":  "List Own Certifications",
+                                                                         "operationId":  "list_own_certifications_api_v1_students_me_certifications_get",
+                                                                         "responses":  {
+                                                                                           "200":  {
+                                                                                                       "description":  "Successful Response",
+                                                                                                       "content":  {
+                                                                                                                       "application/json":  {
+                                                                                                                                                "schema":  {
+                                                                                                                                                               "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                           }
+                                                                                                                                            }
+                                                                                                                   }
+                                                                                                   }
+                                                                                       },
+                                                                         "security":  [
+                                                                                          {
+                                                                                              "HTTPBearer":  [
+
+                                                                                                             ]
+                                                                                          }
+                                                                                      ]
+                                                                     },
+                                                             "post":  {
+                                                                          "tags":  [
+                                                                                       "Students"
+                                                                                   ],
+                                                                          "summary":  "Add Certification",
+                                                                          "operationId":  "add_certification_api_v1_students_me_certifications_post",
+                                                                          "requestBody":  {
+                                                                                              "content":  {
+                                                                                                              "application/json":  {
+                                                                                                                                       "schema":  {
+                                                                                                                                                      "$ref":  "#/components/schemas/CertificationCreate"
+                                                                                                                                                  }
+                                                                                                                                   }
+                                                                                                          },
+                                                                                              "required":  true
+                                                                                          },
+                                                                          "responses":  {
+                                                                                            "200":  {
+                                                                                                        "description":  "Successful Response",
+                                                                                                        "content":  {
+                                                                                                                        "application/json":  {
+                                                                                                                                                 "schema":  {
+                                                                                                                                                                "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                            }
+                                                                                                                                             }
+                                                                                                                    }
+                                                                                                    },
+                                                                                            "422":  {
+                                                                                                        "description":  "Validation Error",
+                                                                                                        "content":  {
+                                                                                                                        "application/json":  {
+                                                                                                                                                 "schema":  {
+                                                                                                                                                                "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                            }
+                                                                                                                                             }
+                                                                                                                    }
+                                                                                                    }
+                                                                                        },
+                                                                          "security":  [
+                                                                                           {
+                                                                                               "HTTPBearer":  [
+
+                                                                                                              ]
+                                                                                           }
+                                                                                       ]
+                                                                      }
+                                                         },
+                  "/api/v1/assessments":  {
+                                              "get":  {
+                                                          "tags":  [
+                                                                       "Assessments"
+                                                                   ],
+                                                          "summary":  "List Assessments",
+                                                          "operationId":  "list_assessments_api_v1_assessments_get",
+                                                          "responses":  {
+                                                                            "200":  {
+                                                                                        "description":  "Successful Response",
+                                                                                        "content":  {
+                                                                                                        "application/json":  {
+                                                                                                                                 "schema":  {
+                                                                                                                                                "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                            }
+                                                                                                                             }
+                                                                                                    }
+                                                                                    }
+                                                                        },
+                                                          "security":  [
+                                                                           {
+                                                                               "HTTPBearer":  [
+
+                                                                                              ]
+                                                                           }
+                                                                       ]
+                                                      },
+                                              "post":  {
+                                                           "tags":  [
+                                                                        "Assessments"
+                                                                    ],
+                                                           "summary":  "Submit Assessment",
+                                                           "operationId":  "submit_assessment_api_v1_assessments_post",
+                                                           "requestBody":  {
+                                                                               "content":  {
+                                                                                               "application/json":  {
+                                                                                                                        "schema":  {
+                                                                                                                                       "$ref":  "#/components/schemas/AssessmentCreate"
+                                                                                                                                   }
+                                                                                                                    }
+                                                                                           },
+                                                                               "required":  true
+                                                                           },
+                                                           "responses":  {
+                                                                             "200":  {
+                                                                                         "description":  "Successful Response",
+                                                                                         "content":  {
+                                                                                                         "application/json":  {
+                                                                                                                                  "schema":  {
+                                                                                                                                                 "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                     }
+                                                                                     },
+                                                                             "422":  {
+                                                                                         "description":  "Validation Error",
+                                                                                         "content":  {
+                                                                                                         "application/json":  {
+                                                                                                                                  "schema":  {
+                                                                                                                                                 "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                     }
+                                                                                     }
+                                                                         },
+                                                           "security":  [
+                                                                            {
+                                                                                "HTTPBearer":  [
+
+                                                                                               ]
+                                                                            }
+                                                                        ]
+                                                       }
+                                          },
+                  "/api/v1/catalog/roles":  {
+                                                "get":  {
+                                                            "tags":  [
+                                                                         "Catalog"
+                                                                     ],
+                                                            "summary":  "Get Roles Catalog",
+                                                            "operationId":  "get_roles_catalog_api_v1_catalog_roles_get",
+                                                            "responses":  {
+                                                                              "200":  {
+                                                                                          "description":  "Successful Response",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      }
+                                                                          }
+                                                        }
+                                            },
+                  "/api/v1/catalog/skills":  {
+                                                 "get":  {
+                                                             "tags":  [
+                                                                          "Catalog"
+                                                                      ],
+                                                             "summary":  "Get Skills Catalog",
+                                                             "operationId":  "get_skills_catalog_api_v1_catalog_skills_get",
+                                                             "responses":  {
+                                                                               "200":  {
+                                                                                           "description":  "Successful Response",
+                                                                                           "content":  {
+                                                                                                           "application/json":  {
+                                                                                                                                    "schema":  {
+                                                                                                                                                   "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                               }
+                                                                                                                                }
+                                                                                                       }
+                                                                                       }
+                                                                           }
+                                                         }
+                                             },
+                  "/api/v1/career-goals":  {
+                                               "get":  {
+                                                           "tags":  [
+                                                                        "Career Goals"
+                                                                    ],
+                                                           "summary":  "Get Career Goals",
+                                                           "operationId":  "get_career_goals_api_v1_career_goals_get",
+                                                           "responses":  {
+                                                                             "200":  {
+                                                                                         "description":  "Successful Response",
+                                                                                         "content":  {
+                                                                                                         "application/json":  {
+                                                                                                                                  "schema":  {
+                                                                                                                                                 "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                             }
+                                                                                                                              }
+                                                                                                     }
+                                                                                     }
+                                                                         },
+                                                           "security":  [
+                                                                            {
+                                                                                "HTTPBearer":  [
+
+                                                                                               ]
+                                                                            }
+                                                                        ]
+                                                       },
+                                               "post":  {
+                                                            "tags":  [
+                                                                         "Career Goals"
+                                                                     ],
+                                                            "summary":  "Create Career Goal",
+                                                            "operationId":  "create_career_goal_api_v1_career_goals_post",
+                                                            "requestBody":  {
+                                                                                "content":  {
+                                                                                                "application/json":  {
+                                                                                                                         "schema":  {
+                                                                                                                                        "$ref":  "#/components/schemas/CareerGoalCreate"
+                                                                                                                                    }
+                                                                                                                     }
+                                                                                            },
+                                                                                "required":  true
+                                                                            },
+                                                            "responses":  {
+                                                                              "200":  {
+                                                                                          "description":  "Successful Response",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      },
+                                                                              "422":  {
+                                                                                          "description":  "Validation Error",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      }
+                                                                          },
+                                                            "security":  [
+                                                                             {
+                                                                                 "HTTPBearer":  [
+
+                                                                                                ]
+                                                                             }
+                                                                         ]
+                                                        }
+                                           },
+                  "/api/v1/analysis/skill-gaps":  {
+                                                      "post":  {
+                                                                   "tags":  [
+                                                                                "Analysis"
+                                                                            ],
+                                                                   "summary":  "Get Skill Gaps",
+                                                                   "operationId":  "get_skill_gaps_api_v1_analysis_skill_gaps_post",
+                                                                   "requestBody":  {
+                                                                                       "content":  {
+                                                                                                       "application/json":  {
+                                                                                                                                "schema":  {
+                                                                                                                                               "$ref":  "#/components/schemas/SkillGapRequest"
+                                                                                                                                           }
+                                                                                                                            }
+                                                                                                   },
+                                                                                       "required":  true
+                                                                                   },
+                                                                   "responses":  {
+                                                                                     "200":  {
+                                                                                                 "description":  "Successful Response",
+                                                                                                 "content":  {
+                                                                                                                 "application/json":  {
+                                                                                                                                          "schema":  {
+                                                                                                                                                         "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                     }
+                                                                                                                                      }
+                                                                                                             }
+                                                                                             },
+                                                                                     "422":  {
+                                                                                                 "description":  "Validation Error",
+                                                                                                 "content":  {
+                                                                                                                 "application/json":  {
+                                                                                                                                          "schema":  {
+                                                                                                                                                         "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                     }
+                                                                                                                                      }
+                                                                                                             }
+                                                                                             }
+                                                                                 },
+                                                                   "security":  [
+                                                                                    {
+                                                                                        "HTTPBearer":  [
+
+                                                                                                       ]
+                                                                                    }
+                                                                                ]
+                                                               }
+                                                  },
+                  "/api/v1/analysis/readiness":  {
+                                                     "post":  {
+                                                                  "tags":  [
+                                                                               "Analysis"
+                                                                           ],
+                                                                  "summary":  "Get Readiness Score",
+                                                                  "operationId":  "get_readiness_score_api_v1_analysis_readiness_post",
+                                                                  "requestBody":  {
+                                                                                      "content":  {
+                                                                                                      "application/json":  {
+                                                                                                                               "schema":  {
+                                                                                                                                              "$ref":  "#/components/schemas/SkillGapRequest"
+                                                                                                                                          }
+                                                                                                                           }
+                                                                                                  },
+                                                                                      "required":  true
+                                                                                  },
+                                                                  "responses":  {
+                                                                                    "200":  {
+                                                                                                "description":  "Successful Response",
+                                                                                                "content":  {
+                                                                                                                "application/json":  {
+                                                                                                                                         "schema":  {
+                                                                                                                                                        "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                    }
+                                                                                                                                     }
+                                                                                                            }
+                                                                                            },
+                                                                                    "422":  {
+                                                                                                "description":  "Validation Error",
+                                                                                                "content":  {
+                                                                                                                "application/json":  {
+                                                                                                                                         "schema":  {
+                                                                                                                                                        "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                    }
+                                                                                                                                     }
+                                                                                                            }
+                                                                                            }
+                                                                                },
+                                                                  "security":  [
+                                                                                   {
+                                                                                       "HTTPBearer":  [
+
+                                                                                                      ]
+                                                                                   }
+                                                                               ]
+                                                              }
+                                                 },
+                  "/api/v1/analysis/project-readiness":  {
+                                                             "post":  {
+                                                                          "tags":  [
+                                                                                       "Analysis"
+                                                                                   ],
+                                                                          "summary":  "Get Project Readiness",
+                                                                          "operationId":  "get_project_readiness_api_v1_analysis_project_readiness_post",
+                                                                          "requestBody":  {
+                                                                                              "content":  {
+                                                                                                              "application/json":  {
+                                                                                                                                       "schema":  {
+                                                                                                                                                      "$ref":  "#/components/schemas/SkillGapRequest"
+                                                                                                                                                  }
+                                                                                                                                   }
+                                                                                                          },
+                                                                                              "required":  true
+                                                                                          },
+                                                                          "responses":  {
+                                                                                            "200":  {
+                                                                                                        "description":  "Successful Response",
+                                                                                                        "content":  {
+                                                                                                                        "application/json":  {
+                                                                                                                                                 "schema":  {
+                                                                                                                                                                "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                            }
+                                                                                                                                             }
+                                                                                                                    }
+                                                                                                    },
+                                                                                            "422":  {
+                                                                                                        "description":  "Validation Error",
+                                                                                                        "content":  {
+                                                                                                                        "application/json":  {
+                                                                                                                                                 "schema":  {
+                                                                                                                                                                "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                            }
+                                                                                                                                             }
+                                                                                                                    }
+                                                                                                    }
+                                                                                        },
+                                                                          "security":  [
+                                                                                           {
+                                                                                               "HTTPBearer":  [
+
+                                                                                                              ]
+                                                                                           }
+                                                                                       ]
+                                                                      }
+                                                         },
+                  "/api/v1/analysis/interview-readiness":  {
+                                                               "post":  {
+                                                                            "tags":  [
+                                                                                         "Analysis"
+                                                                                     ],
+                                                                            "summary":  "Get Interview Readiness",
+                                                                            "operationId":  "get_interview_readiness_api_v1_analysis_interview_readiness_post",
+                                                                            "responses":  {
+                                                                                              "200":  {
+                                                                                                          "description":  "Successful Response",
+                                                                                                          "content":  {
+                                                                                                                          "application/json":  {
+                                                                                                                                                   "schema":  {
+                                                                                                                                                                  "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                              }
+                                                                                                                                               }
+                                                                                                                      }
+                                                                                                      }
+                                                                                          },
+                                                                            "security":  [
+                                                                                             {
+                                                                                                 "HTTPBearer":  [
+
+                                                                                                                ]
+                                                                                             }
+                                                                                         ]
+                                                                        }
+                                                           },
+                  "/api/v1/action-plans":  {
+                                               "post":  {
+                                                            "tags":  [
+                                                                         "Action Plans"
+                                                                     ],
+                                                            "summary":  "Generate Action Plan",
+                                                            "operationId":  "generate_action_plan_api_v1_action_plans_post",
+                                                            "requestBody":  {
+                                                                                "content":  {
+                                                                                                "application/json":  {
+                                                                                                                         "schema":  {
+                                                                                                                                        "$ref":  "#/components/schemas/ActionPlanCreateRequest"
+                                                                                                                                    }
+                                                                                                                     }
+                                                                                            },
+                                                                                "required":  true
+                                                                            },
+                                                            "responses":  {
+                                                                              "200":  {
+                                                                                          "description":  "Successful Response",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      },
+                                                                              "422":  {
+                                                                                          "description":  "Validation Error",
+                                                                                          "content":  {
+                                                                                                          "application/json":  {
+                                                                                                                                   "schema":  {
+                                                                                                                                                  "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                              }
+                                                                                                                               }
+                                                                                                      }
+                                                                                      }
+                                                                          },
+                                                            "security":  [
+                                                                             {
+                                                                                 "HTTPBearer":  [
+
+                                                                                                ]
+                                                                             }
+                                                                         ]
+                                                        }
+                                           },
+                  "/api/v1/action-plans/{plan_id}":  {
+                                                         "get":  {
+                                                                     "tags":  [
+                                                                                  "Action Plans"
+                                                                              ],
+                                                                     "summary":  "Get Action Plan",
+                                                                     "operationId":  "get_action_plan_api_v1_action_plans__plan_id__get",
+                                                                     "security":  [
+                                                                                      {
+                                                                                          "HTTPBearer":  [
+
+                                                                                                         ]
+                                                                                      }
+                                                                                  ],
+                                                                     "parameters":  [
+                                                                                        {
+                                                                                            "name":  "plan_id",
+                                                                                            "in":  "path",
+                                                                                            "required":  true,
+                                                                                            "schema":  {
+                                                                                                           "type":  "string",
+                                                                                                           "title":  "Plan Id"
+                                                                                                       }
+                                                                                        }
+                                                                                    ],
+                                                                     "responses":  {
+                                                                                       "200":  {
+                                                                                                   "description":  "Successful Response",
+                                                                                                   "content":  {
+                                                                                                                   "application/json":  {
+                                                                                                                                            "schema":  {
+                                                                                                                                                           "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                       }
+                                                                                                                                        }
+                                                                                                               }
+                                                                                               },
+                                                                                       "422":  {
+                                                                                                   "description":  "Validation Error",
+                                                                                                   "content":  {
+                                                                                                                   "application/json":  {
+                                                                                                                                            "schema":  {
+                                                                                                                                                           "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                       }
+                                                                                                                                        }
+                                                                                                               }
+                                                                                               }
+                                                                                   }
+                                                                 }
+                                                     },
+                  "/api/v1/action-plans/{plan_id}/items/{item_id}":  {
+                                                                         "patch":  {
+                                                                                       "tags":  [
+                                                                                                    "Action Plans"
+                                                                                                ],
+                                                                                       "summary":  "Update Action Item Status",
+                                                                                       "operationId":  "update_action_item_status_api_v1_action_plans__plan_id__items__item_id__patch",
+                                                                                       "security":  [
+                                                                                                        {
+                                                                                                            "HTTPBearer":  [
+
+                                                                                                                           ]
+                                                                                                        }
+                                                                                                    ],
+                                                                                       "parameters":  [
+                                                                                                          {
+                                                                                                              "name":  "plan_id",
+                                                                                                              "in":  "path",
+                                                                                                              "required":  true,
+                                                                                                              "schema":  {
+                                                                                                                             "type":  "string",
+                                                                                                                             "title":  "Plan Id"
+                                                                                                                         }
+                                                                                                          },
+                                                                                                          {
+                                                                                                              "name":  "item_id",
+                                                                                                              "in":  "path",
+                                                                                                              "required":  true,
+                                                                                                              "schema":  {
+                                                                                                                             "type":  "string",
+                                                                                                                             "title":  "Item Id"
+                                                                                                                         }
+                                                                                                          }
+                                                                                                      ],
+                                                                                       "requestBody":  {
+                                                                                                           "required":  true,
+                                                                                                           "content":  {
+                                                                                                                           "application/json":  {
+                                                                                                                                                    "schema":  {
+                                                                                                                                                                   "$ref":  "#/components/schemas/ActionStatusUpdate"
+                                                                                                                                                               }
+                                                                                                                                                }
+                                                                                                                       }
+                                                                                                       },
+                                                                                       "responses":  {
+                                                                                                         "200":  {
+                                                                                                                     "description":  "Successful Response",
+                                                                                                                     "content":  {
+                                                                                                                                     "application/json":  {
+                                                                                                                                                              "schema":  {
+                                                                                                                                                                             "$ref":  "#/components/schemas/ApiResponse"
+                                                                                                                                                                         }
+                                                                                                                                                          }
+                                                                                                                                 }
+                                                                                                                 },
+                                                                                                         "422":  {
+                                                                                                                     "description":  "Validation Error",
+                                                                                                                     "content":  {
+                                                                                                                                     "application/json":  {
+                                                                                                                                                              "schema":  {
+                                                                                                                                                                             "$ref":  "#/components/schemas/HTTPValidationError"
+                                                                                                                                                                         }
+                                                                                                                                                          }
+                                                                                                                                 }
+                                                                                                                 }
+                                                                                                     }
+                                                                                   }
+                                                                     }
+              },
+    "components":  {
+                       "schemas":  {
+                                       "ActionPlanCreateRequest":  {
+                                                                       "properties":  {
+                                                                                          "goal_id":  {
+                                                                                                          "anyOf":  [
+                                                                                                                        {
+                                                                                                                            "type":  "string"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "type":  "null"
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                          "title":  "Goal Id"
+                                                                                                      },
+                                                                                          "target_role":  {
+                                                                                                              "anyOf":  [
+                                                                                                                            {
+                                                                                                                                "type":  "string"
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "type":  "null"
+                                                                                                                            }
+                                                                                                                        ],
+                                                                                                              "title":  "Target Role"
+                                                                                                          }
+                                                                                      },
+                                                                       "type":  "object",
+                                                                       "title":  "ActionPlanCreateRequest"
+                                                                   },
+                                       "ActionStatusUpdate":  {
+                                                                  "properties":  {
+                                                                                     "status":  {
+                                                                                                    "type":  "string",
+                                                                                                    "pattern":  "^(todo|in_progress|done)$",
+                                                                                                    "title":  "Status"
+                                                                                                }
+                                                                                 },
+                                                                  "type":  "object",
+                                                                  "required":  [
+                                                                                   "status"
+                                                                               ],
+                                                                  "title":  "ActionStatusUpdate"
+                                                              },
+                                       "ApiResponse":  {
+                                                           "properties":  {
+                                                                              "success":  {
+                                                                                              "type":  "boolean",
+                                                                                              "title":  "Success",
+                                                                                              "default":  true
+                                                                                          },
+                                                                              "data":  {
+                                                                                           "anyOf":  [
+                                                                                                         {
+
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "type":  "null"
+                                                                                                         }
+                                                                                                     ],
+                                                                                           "title":  "Data"
+                                                                                       },
+                                                                              "error":  {
+                                                                                            "anyOf":  [
+                                                                                                          {
+                                                                                                              "$ref":  "#/components/schemas/ErrorDetail"
+                                                                                                          },
+                                                                                                          {
+                                                                                                              "type":  "null"
+                                                                                                          }
+                                                                                                      ]
+                                                                                        },
+                                                                              "request_id":  {
+                                                                                                 "anyOf":  [
+                                                                                                               {
+                                                                                                                   "type":  "string"
+                                                                                                               },
+                                                                                                               {
+                                                                                                                   "type":  "null"
+                                                                                                               }
+                                                                                                           ],
+                                                                                                 "title":  "Request Id"
+                                                                                             }
+                                                                          },
+                                                           "type":  "object",
+                                                           "title":  "ApiResponse"
+                                                       },
+                                       "AssessmentCreate":  {
+                                                                "properties":  {
+                                                                                   "assessment_type":  {
+                                                                                                           "type":  "string",
+                                                                                                           "maxLength":  100,
+                                                                                                           "minLength":  2,
+                                                                                                           "title":  "Assessment Type"
+                                                                                                       },
+                                                                                   "score_or_result":  {
+                                                                                                           "type":  "number",
+                                                                                                           "maximum":  100.0,
+                                                                                                           "minimum":  0.0,
+                                                                                                           "title":  "Score Or Result"
+                                                                                                       },
+                                                                                   "max_score":  {
+                                                                                                     "type":  "number",
+                                                                                                     "exclusiveMinimum":  0.0,
+                                                                                                     "title":  "Max Score",
+                                                                                                     "default":  100.0
+                                                                                                 }
+                                                                               },
+                                                                "type":  "object",
+                                                                "required":  [
+                                                                                 "assessment_type",
+                                                                                 "score_or_result"
+                                                                             ],
+                                                                "title":  "AssessmentCreate"
+                                                            },
+                                       "CareerGoalCreate":  {
+                                                                "properties":  {
+                                                                                   "target_role":  {
+                                                                                                       "type":  "string",
+                                                                                                       "maxLength":  100,
+                                                                                                       "minLength":  2,
+                                                                                                       "title":  "Target Role"
+                                                                                                   },
+                                                                                   "target_date":  {
+                                                                                                       "anyOf":  [
+                                                                                                                     {
+                                                                                                                         "type":  "string",
+                                                                                                                         "maxLength":  50
+                                                                                                                     },
+                                                                                                                     {
+                                                                                                                         "type":  "null"
+                                                                                                                     }
+                                                                                                                 ],
+                                                                                                       "title":  "Target Date"
+                                                                                                   },
+                                                                                   "notes":  {
+                                                                                                 "anyOf":  [
+                                                                                                               {
+                                                                                                                   "type":  "string"
+                                                                                                               },
+                                                                                                               {
+                                                                                                                   "type":  "null"
+                                                                                                               }
+                                                                                                           ],
+                                                                                                 "title":  "Notes"
+                                                                                             }
+                                                                               },
+                                                                "type":  "object",
+                                                                "required":  [
+                                                                                 "target_role"
+                                                                             ],
+                                                                "title":  "CareerGoalCreate"
+                                                            },
+                                       "CertificationCreate":  {
+                                                                   "properties":  {
+                                                                                      "name":  {
+                                                                                                   "type":  "string",
+                                                                                                   "maxLength":  150,
+                                                                                                   "minLength":  2,
+                                                                                                   "title":  "Name"
+                                                                                               },
+                                                                                      "issuer":  {
+                                                                                                     "type":  "string",
+                                                                                                     "maxLength":  150,
+                                                                                                     "minLength":  2,
+                                                                                                     "title":  "Issuer"
+                                                                                                 },
+                                                                                      "verification_reference":  {
+                                                                                                                     "anyOf":  [
+                                                                                                                                   {
+                                                                                                                                       "type":  "string",
+                                                                                                                                       "maxLength":  255
+                                                                                                                                   },
+                                                                                                                                   {
+                                                                                                                                       "type":  "null"
+                                                                                                                                   }
+                                                                                                                               ],
+                                                                                                                     "title":  "Verification Reference"
+                                                                                                                 }
+                                                                                  },
+                                                                   "type":  "object",
+                                                                   "required":  [
+                                                                                    "name",
+                                                                                    "issuer"
+                                                                                ],
+                                                                   "title":  "CertificationCreate"
+                                                               },
+                                       "ErrorDetail":  {
+                                                           "properties":  {
+                                                                              "code":  {
+                                                                                           "type":  "string",
+                                                                                           "title":  "Code"
+                                                                                       },
+                                                                              "message":  {
+                                                                                              "type":  "string",
+                                                                                              "title":  "Message"
+                                                                                          },
+                                                                              "details":  {
+                                                                                              "anyOf":  [
+                                                                                                            {
+
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "type":  "null"
+                                                                                                            }
+                                                                                                        ],
+                                                                                              "title":  "Details"
+                                                                                          }
+                                                                          },
+                                                           "type":  "object",
+                                                           "required":  [
+                                                                            "code",
+                                                                            "message"
+                                                                        ],
+                                                           "title":  "ErrorDetail"
+                                                       },
+                                       "EvidenceCreate":  {
+                                                              "properties":  {
+                                                                                 "skill_name":  {
+                                                                                                    "type":  "string",
+                                                                                                    "maxLength":  80,
+                                                                                                    "minLength":  1,
+                                                                                                    "title":  "Skill Name"
+                                                                                                },
+                                                                                 "source_type":  {
+                                                                                                     "type":  "string",
+                                                                                                     "pattern":  "^(assessment|project|certification|interview|self_reported)$",
+                                                                                                     "title":  "Source Type"
+                                                                                                 },
+                                                                                 "evidence_reference":  {
+                                                                                                            "type":  "string",
+                                                                                                            "maxLength":  255,
+                                                                                                            "minLength":  3,
+                                                                                                            "title":  "Evidence Reference"
+                                                                                                        },
+                                                                                 "observed_level":  {
+                                                                                                        "type":  "integer",
+                                                                                                        "maximum":  4.0,
+                                                                                                        "minimum":  1.0,
+                                                                                                        "title":  "Observed Level",
+                                                                                                        "description":  "1=Beginner, 2=Basic, 3=Intermediate, 4=Advanced"
+                                                                                                    }
+                                                                             },
+                                                              "type":  "object",
+                                                              "required":  [
+                                                                               "skill_name",
+                                                                               "source_type",
+                                                                               "evidence_reference",
+                                                                               "observed_level"
+                                                                           ],
+                                                              "title":  "EvidenceCreate"
+                                                          },
+                                       "HTTPValidationError":  {
+                                                                   "properties":  {
+                                                                                      "detail":  {
+                                                                                                     "items":  {
+                                                                                                                   "$ref":  "#/components/schemas/ValidationError"
+                                                                                                               },
+                                                                                                     "type":  "array",
+                                                                                                     "title":  "Detail"
+                                                                                                 }
+                                                                                  },
+                                                                   "type":  "object",
+                                                                   "title":  "HTTPValidationError"
+                                                               },
+                                       "LoginRequest":  {
+                                                            "properties":  {
+                                                                               "email":  {
+                                                                                             "type":  "string",
+                                                                                             "format":  "email",
+                                                                                             "title":  "Email"
+                                                                                         },
+                                                                               "password":  {
+                                                                                                "type":  "string",
+                                                                                                "title":  "Password"
+                                                                                            }
+                                                                           },
+                                                            "type":  "object",
+                                                            "required":  [
+                                                                             "email",
+                                                                             "password"
+                                                                         ],
+                                                            "title":  "LoginRequest"
+                                                        },
+                                       "ProjectCreate":  {
+                                                             "properties":  {
+                                                                                "title":  {
+                                                                                              "type":  "string",
+                                                                                              "maxLength":  150,
+                                                                                              "minLength":  2,
+                                                                                              "title":  "Title"
+                                                                                          },
+                                                                                "description":  {
+                                                                                                    "type":  "string",
+                                                                                                    "minLength":  5,
+                                                                                                    "title":  "Description"
+                                                                                                },
+                                                                                "skills_used":  {
+                                                                                                    "items":  {
+                                                                                                                  "type":  "string"
+                                                                                                              },
+                                                                                                    "type":  "array",
+                                                                                                    "minItems":  1,
+                                                                                                    "title":  "Skills Used"
+                                                                                                },
+                                                                                "status":  {
+                                                                                               "type":  "string",
+                                                                                               "pattern":  "^(planned|in_progress|completed)$",
+                                                                                               "title":  "Status",
+                                                                                               "default":  "in_progress"
+                                                                                           }
+                                                                            },
+                                                             "type":  "object",
+                                                             "required":  [
+                                                                              "title",
+                                                                              "description",
+                                                                              "skills_used"
+                                                                          ],
+                                                             "title":  "ProjectCreate"
+                                                         },
+                                       "RegisterRequest":  {
+                                                               "properties":  {
+                                                                                  "display_name":  {
+                                                                                                       "type":  "string",
+                                                                                                       "maxLength":  100,
+                                                                                                       "minLength":  2,
+                                                                                                       "title":  "Display Name"
+                                                                                                   },
+                                                                                  "email":  {
+                                                                                                "type":  "string",
+                                                                                                "format":  "email",
+                                                                                                "title":  "Email"
+                                                                                            },
+                                                                                  "password":  {
+                                                                                                   "type":  "string",
+                                                                                                   "maxLength":  100,
+                                                                                                   "minLength":  6,
+                                                                                                   "title":  "Password"
+                                                                                               },
+                                                                                  "consent_given":  {
+                                                                                                        "type":  "boolean",
+                                                                                                        "title":  "Consent Given",
+                                                                                                        "description":  "Consent to store educational profile data"
+                                                                                                    }
+                                                                              },
+                                                               "type":  "object",
+                                                               "required":  [
+                                                                                "display_name",
+                                                                                "email",
+                                                                                "password",
+                                                                                "consent_given"
+                                                                            ],
+                                                               "title":  "RegisterRequest"
+                                                           },
+                                       "SkillGapRequest":  {
+                                                               "properties":  {
+                                                                                  "goal_id":  {
+                                                                                                  "anyOf":  [
+                                                                                                                {
+                                                                                                                    "type":  "string"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "type":  "null"
+                                                                                                                }
+                                                                                                            ],
+                                                                                                  "title":  "Goal Id"
+                                                                                              },
+                                                                                  "target_role":  {
+                                                                                                      "anyOf":  [
+                                                                                                                    {
+                                                                                                                        "type":  "string"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "type":  "null"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                      "title":  "Target Role"
+                                                                                                  }
+                                                                              },
+                                                               "type":  "object",
+                                                               "title":  "SkillGapRequest"
+                                                           },
+                                       "StudentUpdate":  {
+                                                             "properties":  {
+                                                                                "display_name":  {
+                                                                                                     "anyOf":  [
+                                                                                                                   {
+                                                                                                                       "type":  "string",
+                                                                                                                       "maxLength":  100,
+                                                                                                                       "minLength":  2
+                                                                                                                   },
+                                                                                                                   {
+                                                                                                                       "type":  "null"
+                                                                                                                   }
+                                                                                                               ],
+                                                                                                     "title":  "Display Name"
+                                                                                                 }
+                                                                            },
+                                                             "type":  "object",
+                                                             "title":  "StudentUpdate"
+                                                         },
+                                       "ValidationError":  {
+                                                               "properties":  {
+                                                                                  "loc":  {
+                                                                                              "items":  {
+                                                                                                            "anyOf":  [
+                                                                                                                          {
+                                                                                                                              "type":  "string"
+                                                                                                                          },
+                                                                                                                          {
+                                                                                                                              "type":  "integer"
+                                                                                                                          }
+                                                                                                                      ]
+                                                                                                        },
+                                                                                              "type":  "array",
+                                                                                              "title":  "Location"
+                                                                                          },
+                                                                                  "msg":  {
+                                                                                              "type":  "string",
+                                                                                              "title":  "Message"
+                                                                                          },
+                                                                                  "type":  {
+                                                                                               "type":  "string",
+                                                                                               "title":  "Error Type"
+                                                                                           },
+                                                                                  "input":  {
+                                                                                                "title":  "Input"
+                                                                                            },
+                                                                                  "ctx":  {
+                                                                                              "type":  "object",
+                                                                                              "title":  "Context"
+                                                                                          }
+                                                                              },
+                                                               "type":  "object",
+                                                               "required":  [
+                                                                                "loc",
+                                                                                "msg",
+                                                                                "type"
+                                                                            ],
+                                                               "title":  "ValidationError"
+                                                           }
+                                   },
+                       "securitySchemes":  {
+                                               "HTTPBearer":  {
+                                                                  "type":  "http",
+                                                                  "scheme":  "bearer"
+                                                              }
+                                           }
+                   }
+}
